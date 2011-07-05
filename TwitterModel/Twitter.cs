@@ -25,12 +25,13 @@ namespace NekoVampire.TwitterCore
         }
 
         protected IOAuthKey AuthKey;
-        protected const string ApiUrl = "http://api.twitter.com/1/";
+        protected const string ApiUrl = "https://api.twitter.com/1/";
+        protected const string StreamApiUrl = "https://userstream.twitter.com/2/";
         protected ConcurrentDictionary<long, IStatus> statusCache = new ConcurrentDictionary<long, IStatus>();
 
-        public ReadOnlyCollection<IStatus> StatusCache
+        public IEnumerable<IStatus> StatusCache
         {
-            get { return new ReadOnlyCollection<IStatus>(statusCache.Values.ToArray()); }
+            get { return statusCache.Values; }
         }
 
         #region TwitterAPI
@@ -49,7 +50,7 @@ namespace NekoVampire.TwitterCore
 
         public IObservable<IStatus> GetUserStreams()
         {
-            return client.HttpRequest("https://userstream.twitter.com/2/user.json", "GET")
+            return client.HttpRequest(StreamApiUrl + "user.json", "GET")
                 .GetResponseLines()
                 .ObserveOn(Scheduler.TaskPool)
                 .Select(s => DynamicJson.Parse(s))
