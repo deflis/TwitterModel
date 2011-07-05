@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwitterModel", "TwitterModel\TwitterModel.csproj", "{28298E76-49E2-4F91-AC7D-DBEDBA9D2869}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReactiveWebClient", "ReactiveWebClient\ReactiveWebClient.csproj", "{AE4BAFA0-B906-4CDC-ADE7-84BDC2D23134}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{28298E76-49E2-4F91-AC7D-DBEDBA9D2869}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28298E76-49E2-4F91-AC7D-DBEDBA9D2869}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28298E76-49E2-4F91-AC7D-DBEDBA9D2869}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28298E76-49E2-4F91-AC7D-DBEDBA9D2869}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE4BAFA0-B906-4CDC-ADE7-84BDC2D23134}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE4BAFA0-B906-4CDC-ADE7-84BDC2D23134}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE4BAFA0-B906-4CDC-ADE7-84BDC2D23134}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE4BAFA0-B906-4CDC-ADE7-84BDC2D23134}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
